@@ -184,6 +184,8 @@ The following queries are optimized for performance, with indexes and optimizati
    ```sql
    CREATE INDEX ORDERS_DATE_INDEX ON ORDERS (DATE);
 
+   CLUSTER PRODUCTS USING ORDERS_DATE_INDEX; 
+
    SELECT C.NAME, C.EMAIL, O.DATE
    FROM CUSTOMERS C
    JOIN (SELECT DATE, CUSTOMER_ID FROM ORDERS ORDER BY DATE DESC LIMIT 1000) O ON C.CUSTOMER_ID = O.CUSTOMER_ID;
@@ -193,6 +195,10 @@ The following queries are optimized for performance, with indexes and optimizati
    A query to list products that have stock quantities less than 10.
 
    ```sql
+   CREATE INDEX PRODUCTS_STOCK_QUANTITY_INDEX ON PRODUCTS (STOCK_QUANTITY);
+
+   CLUSTER PRODUCTS USING PRODUCTS_STOCK_QUANTITY_INDEX;
+   
    SELECT NAME, DESCRIPTION, PRICE, STOCK_QUANTITY, AUTHOR
    FROM PRODUCTS
    WHERE STOCK_QUANTITY < 10
