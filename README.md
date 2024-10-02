@@ -71,12 +71,6 @@ CREATE TABLE order_details (
 - Each **product** belongs to a **category** (one-to-many relationship).
 - Each **order** belongs to a **customer** (one-to-many relationship).
 - Each **order** can have multiple **products** through the **order_details** table (many-to-many relationship).
-  
-### Schema Diagram
-
-- **Categories** ↔ **Products** (1-to-many)
-- **Customers** ↔ **Orders** (1-to-many)
-- **Orders** ↔ **Products** (many-to-many via **Order Details**)
 
 ## Database Functions for Data Insertion
 
