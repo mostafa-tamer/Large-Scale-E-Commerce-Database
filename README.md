@@ -2,16 +2,6 @@
 
 This project focuses on designing and populating a large-scale e-commerce database using PostgreSQL. The tasks include creating database functions to insert millions of rows efficiently and writing optimized SQL queries for reporting and data retrieval.
 
-Here’s the database schema based on the provided data and queries. This schema includes all the necessary tables for products, categories, customers, orders, and order details, along with the relationships between them.
-
-You can include this in your GitHub README to give a clear representation of the database design.
-
----
-
-# E-Commerce Database Schema
-
-The following is the database schema for the e-commerce project, including all tables and their relationships. The schema has been optimized for efficient data insertion and querying.
-
 ## Tables
 
 ### 1. **Categories Table**
