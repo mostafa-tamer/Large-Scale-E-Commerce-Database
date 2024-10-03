@@ -5,8 +5,8 @@ This project focuses on designing and populating a large-scale e-commerce databa
 ## Database Schema
 
 The following image illustrates the database schema for the e-commerce project:
- 
-![E-commerce Database Schema](https://github.com/user-attachments/assets/54c06c49-c962-4295-a030-f801fc52c742)
+  
+<img src="[./images/schema.png](https://github.com/user-attachments/assets/54c06c49-c962-4295-a030-f801fc52c742)" alt="E-commerce Database Schema" width="50%">
 
 ## Tables
 
