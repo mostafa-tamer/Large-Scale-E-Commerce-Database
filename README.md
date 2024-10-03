@@ -166,7 +166,7 @@ JOIN CATEGORIES C ON P.CATEGORY_ID = C.CATEGORY_ID
 GROUP BY C.NAME;
 ```
 - **Query Time (Before Optimization):** 55 ms
-- **Optimization Technique:** Changed `COUNT(P.*)` to `COUNT(P.PRODUCT_ID)` to avoid unnecessary computation on entire rows.
+- **Optimization Technique:** Changed `COUNT(P.*)` to `COUNT(P.PRODUCT_ID)` to avoid unnecessary computation on entire rows and grouping by the `C.CATEGORY_ID` before `C.NAME`.
 - **Query Time (After Optimization):** 30 ms
 
 #### After Optimization:
