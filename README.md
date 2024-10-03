@@ -225,7 +225,7 @@ ORDER BY DATE DESC
 LIMIT 1000;
 ```
 - **Query Time (Before Optimization):** 1.5 sec
-- **Optimization Technique:** Added an index on `ORDERS.DATE` to speed up sorting and clustered the table to ensure efficient retrieval.
+- **Optimization Technique:** Added an index on `ORDERS.DATE` to speed up sorting and clustered the table to ensure efficient retrieval as well as joining will orders after filteration done on orders.
 - **Query Time (After Optimization):** 0.006 sec
 
 #### After Optimization:
