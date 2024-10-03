@@ -1,4 +1,4 @@
-# E-Commerce Database Design
+# Large-Scale E-Commerce Database Design
 
 This project focuses on designing and populating a large-scale e-commerce database using PostgreSQL. The tasks include creating database functions to insert millions of rows efficiently and writing optimized SQL queries for reporting and data retrieval.
 
