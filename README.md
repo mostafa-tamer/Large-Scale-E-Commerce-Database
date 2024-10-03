@@ -305,8 +305,6 @@ CREATE MATERIALIZED VIEW IF NOT EXISTS EACH_CATEGORY_REVENUE AS (
 SELECT * FROM EACH_CATEGORY_REVENUE;
 ```
 
---- 
-
 ## Query Performance Optimization
 
 All queries have been optimized with appropriate indexes and use of materialized views where necessary. Further improvements can be made using `EXPLAIN ANALYZE` to evaluate and refine query performance.
