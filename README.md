@@ -307,8 +307,6 @@ SELECT * FROM EACH_CATEGORY_REVENUE;
 
 --- 
 
-Each query's optimization was tailored to reduce query execution time, with techniques such as index creation, clustering, and the use of materialized views to speed up complex queries.
-
 ## Query Performance Optimization
 
 All queries have been optimized with appropriate indexes and use of materialized views where necessary. Further improvements can be made using `EXPLAIN ANALYZE` to evaluate and refine query performance.
