@@ -6,7 +6,7 @@ This project focuses on designing and populating a large-scale e-commerce databa
  
 strates the database schema for the e-commerce project:
   
-<img src="[https://github.com/user-attachments/assets/e8c2b38c-a9eb-4c20-a094-2f688e9bbfa0" alt="E-commerce Database Schema" width="30%">
+<img src="https://github.com/user-attachments/assets/e8c2b38c-a9eb-4c20-a094-2f688e9bbfa0" alt="E-commerce Database Schema" width="30%">
 
 ## Tables
 
