@@ -171,9 +171,9 @@ FROM PRODUCTS P
 JOIN CATEGORIES C ON P.CATEGORY_ID = C.CATEGORY_ID
 GROUP BY C.NAME;
 ```
-- **Query Time (Before Optimization):** 120ms
+- **Query Time (Before Optimization):** 55 ms
 - **Optimization Technique:** Changed `COUNT(P.*)` to `COUNT(P.PRODUCT_ID)` to avoid unnecessary computation on entire rows.
-- **Query Time (After Optimization):** 85ms
+- **Query Time (After Optimization):** 30 ms
 
 #### After Optimization:
 ```sql
@@ -198,9 +198,9 @@ GROUP BY C.NAME
 ORDER BY TOTAL_SPENDING DESC
 LIMIT 10;
 ```
-- **Query Time (Before Optimization):** 150ms
+- **Query Time (Before Optimization):** 22 sec
 - **Optimization Technique:** Used a `WITH` clause to calculate `TOTAL_SPENDING` separately before joining with customers, reducing redundant computations.
-- **Query Time (After Optimization):** 100ms
+- **Query Time (After Optimization):** 12.5 sec
 
 #### After Optimization:
 ```sql
@@ -230,9 +230,9 @@ JOIN ORDERS O ON C.CUSTOMER_ID = O.CUSTOMER_ID
 ORDER BY DATE DESC
 LIMIT 1000;
 ```
-- **Query Time (Before Optimization):** 300ms
+- **Query Time (Before Optimization):** 1.5 sec
 - **Optimization Technique:** Added an index on `ORDERS.DATE` to speed up sorting and clustered the table to ensure efficient retrieval.
-- **Query Time (After Optimization):** 50ms
+- **Query Time (After Optimization):** 0.006 sec
 
 #### After Optimization:
 ```sql
@@ -257,9 +257,9 @@ FROM PRODUCTS
 WHERE STOCK_QUANTITY < 10
 ORDER BY STOCK_QUANTITY;
 ```
-- **Query Time (Before Optimization):** 130ms
+- **Query Time (Before Optimization):** 15 ms
 - **Optimization Technique:** Created an index on `STOCK_QUANTITY` and clustered the table for efficient retrieval of low stock products.
-- **Query Time (After Optimization):** 40ms
+- **Query Time (After Optimization):** 2 ms
 
 #### After Optimization:
 ```sql
@@ -287,9 +287,9 @@ JOIN PRODUCTS P ON P.PRODUCT_ID = OD.PRODUCT_ID
 JOIN CATEGORIES C ON P.CATEGORY_ID = C.CATEGORY_ID
 GROUP BY C.NAME;
 ```
-- **Query Time (Before Optimization):** 400ms
+- **Query Time (Before Optimization):** 11 sec
 - **Optimization Technique:** Used a materialized view to precompute and cache results for faster querying.
-- **Query Time (After Optimization):** 20ms (using materialized view)
+- **Query Time (After Optimization):** 0.00003 sec (using materialized view)
 
 #### After Optimization:
 ```sql
