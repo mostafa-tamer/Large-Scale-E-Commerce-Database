@@ -252,7 +252,7 @@ WHERE STOCK_QUANTITY < 10
 ORDER BY STOCK_QUANTITY;
 ```
 - **Query Time (Before Optimization):** 15 ms
-- **Optimization Technique:** Created an index on `STOCK_QUANTITY` and clustered the table for efficient retrieval of low stock products.
+- **Optimization Technique:** Created a clustered index on `STOCK_QUANTITY` and clustered the table for efficient retrieval of low stock products.
 - **Query Time (After Optimization):** 2 ms
 
 #### After Optimization:
