@@ -2,6 +2,12 @@
 
 This project focuses on designing and populating a large-scale e-commerce database using PostgreSQL. The tasks include creating database functions to insert millions of rows efficiently and writing optimized SQL queries for reporting and data retrieval.
 
+## Database Schema
+
+The following image illustrates the database schema for the e-commerce project:
+ 
+![E-commerce Database Schema](https://github.com/user-attachments/assets/54c06c49-c962-4295-a030-f801fc52c742)
+
 ## Tables
 
 ### 1. **Categories Table**
